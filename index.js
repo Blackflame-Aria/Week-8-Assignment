@@ -7,13 +7,14 @@
 // Kitten class
 // name
 // color
+//ANCHOR 
 class Kitten {
     constructor(name, color) {
       this.name = name;
       this.color = color;
     }
   }
-  
+//ANCHOR  
   // Adoption Menu class
   class AdoptionMenu {
     constructor() {
@@ -26,18 +27,21 @@ class Kitten {
     // Prompt for fur color
     // Create new kitten
     // Push kitten into array
+//ANCHOR    
     addKitten() {
       let name = prompt("Enter kitten name:");
       let color = prompt("Enter fur color:");
       this.kittens.push(new Kitten(name, color));
     }
-  
+ 
+//ANCHOR    
     // Delete kitten
     deleteKitten() {
       let index = prompt("Enter kitten index to remove:");
       this.kittens.splice(index, 1);
     }
   
+//ANCHOR
     // View kittens
     viewKittens() {
       let display = ``;
@@ -47,6 +51,7 @@ class Kitten {
       alert(`🐾 Adoptable Kittens 🐾\n\n${display}`);
     }
   
+//ANCHOR
     // Show main menu
     showMainMenu() {
       return prompt(`
@@ -59,6 +64,7 @@ class Kitten {
       `);
     }
   
+//ANCHOR
     // Start menu
     start() {
       let selection = this.showMainMenu();
@@ -75,6 +81,7 @@ class Kitten {
     }
   }
   
+//ANCHOR
   // Instantiate the menu and invoke start
   let adoptionCenter = new AdoptionMenu();
   adoptionCenter.start();
